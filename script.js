@@ -4,13 +4,15 @@ if (window.matchMedia("(min-width: 1440px)").matches) {
     "./assets/images/illustration-sign-up-desktop.svg";
 }
 //write functuion where  check valid email
-function validateEmail() {
-  const emailnput = document.getElementsByTagName("input");
+function validateEmail(event) {
+  event.preventDefault();
+  const emaiInput = document.querySelector("input[name='email']");
   const errorMessage = document.querySelector(".error-message");
   // Regular expression for a simple email validation
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (emailRegex.test(emailnput.value)) {
+  if (emailRegex.test(emaiInput.value)) {
     errorMessage.textContent = "";
+    window.location.href = "./success.html";
   } else {
     errorMessage.textContent = "Valid email required";
   }
@@ -18,6 +20,6 @@ function validateEmail() {
 
 // add event to submit button when clicking to check validation email
 const submitBtn = document.querySelector(".submit-btn");
-submitBtn.addEventListener("click", () => {
-  validateEmail();
+submitBtn.addEventListener("click", (event) => {
+  validateEmail(event);
 });
