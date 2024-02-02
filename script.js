@@ -15,4 +15,9 @@ function validateEmail() {
     errorMessage.textContent = "Valid email required";
   }
 }
-validateEmail();
+
+// add event to submit button when clicking to check validation email
+const submitBtn = document.querySelector(".submit-btn");
+submitBtn.addEventListener("click", () => {
+  validateEmail();
+});
