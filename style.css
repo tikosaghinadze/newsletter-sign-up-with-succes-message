@@ -72,6 +72,7 @@ label {
   font-size: 16px;
   font-weight: 700;
   margin: 24px 0 40px;
+  cursor: pointer;
 }
 input {
   width: 327px;
@@ -89,10 +90,11 @@ input::placeholder {
 @media (min-width: 1440px) {
   body {
     background: var(--Pale-Navy, #36384d);
+    height: 100vh;
   }
   main {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 928px;
     height: 641px;
@@ -103,5 +105,22 @@ input::placeholder {
   .mobile-img {
     order: 1;
     width: 400px;
+  }
+  .contents-header {
+    font-size: 56px;
+  }
+  .contents-p {
+    width: 376px;
+  }
+  .offers {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  input {
+    width: 376px;
+  }
+  .submit-btn {
+    width: 376px;
   }
 }
