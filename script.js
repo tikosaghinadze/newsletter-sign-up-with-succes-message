@@ -3,4 +3,16 @@ if (window.matchMedia("(min-width: 1440px)").matches) {
   document.querySelector(".mobile-img").src =
     "./assets/images/illustration-sign-up-desktop.svg";
 }
-console.log(2);
+//write functuion where  check valid email
+function validateEmail() {
+  const emailnput = document.getElementsByTagName("input");
+  const errorMessage = document.querySelector(".error-message");
+  // Regular expression for a simple email validation
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (emailRegex.test(emailnput.value)) {
+    errorMessage.textContent = "";
+  } else {
+    errorMessage.textContent = "Valid email required";
+  }
+}
+validateEmail();
