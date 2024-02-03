@@ -12,6 +12,9 @@ body {
 .mobile-img {
   width: 100%;
 }
+.desktop-img {
+  display: none;
+}
 main {
   width: 375px;
   height: 100vh;
@@ -123,6 +126,11 @@ input::placeholder {
   .mobile-img {
     order: 1;
     width: 400px;
+    display: none;
+  }
+  .desktop-img {
+    display: block;
+    order: 1;
   }
   .contents-header {
     font-size: 56px;

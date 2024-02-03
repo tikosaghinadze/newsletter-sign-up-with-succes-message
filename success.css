@@ -61,3 +61,9 @@
     margin-bottom: 40px;
   }
 }
+.email {
+  color: var(--Dark-Navy, #242742);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+}
